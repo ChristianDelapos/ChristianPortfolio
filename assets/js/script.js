@@ -155,5 +155,16 @@ for (let i = 0; i < navigationLinks.length; i++) {
       }
     }
 
+    const contactMapIframe = document.querySelector("[data-contact-map]");
+    if (
+      contactMapIframe &&
+      contactMapIframe.dataset.mapSrc &&
+      this.innerHTML.trim().toLowerCase() === "contact" &&
+      !contactMapIframe.dataset.mapReady
+    ) {
+      contactMapIframe.src = contactMapIframe.dataset.mapSrc;
+      contactMapIframe.dataset.mapReady = "1";
+    }
+
   });
 }
