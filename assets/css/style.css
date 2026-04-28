@@ -921,6 +921,18 @@ main {
   line-height: 1.6;
 }
 
+/* Work experience: show real bullets (global reset sets li { list-style: none }) */
+.timeline-item > ul.timeline-text {
+  padding-left: 1.25em;
+  margin-top: 0.5rem;
+}
+
+.timeline-item > ul.timeline-text > li {
+  list-style: disc;
+  list-style-position: outside;
+  margin-bottom: 0.4em;
+}
+
 /* Animation */
 @keyframes fadeInUp {
   from {
