@@ -1320,7 +1320,7 @@ main {
   width: 100%;
   height: 100%;
   border: none;
-  filter: grayscale(1) invert(1);
+  /* Do not use CSS filters here — they break Google Maps rendering inside the iframe */
 }
 
 .contact-form {
